@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Job Portal with Enhanced Animations</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1><b>NextGen Career portal</b> </h1>
+        <h4>Enter Your Name & Search Jobs by Skills</h4>
+        <!-- Name Input -->
+        <input type="text" id="username" placeholder="Enter your name">
+        <!-- Skill Input -->
+        <input list="skills-list" id="skills" placeholder="Enter your skill(eg:python)">
+        <!-- Submit Button -->
+        <button id="search-btn">Submit</button>
+        <datalist id="skills-list">
+            <option value="Python">
+            <option value="JavaScript">
+            <option value="Java">
+            <option value="C++">
+            <option value="Node.js">
+            <option value="AWS">
+            <option value="React">
+            <option value="Flutter">
+            <option value="Go">
+            <option value="DevOps">
+        </datalist>
+        
+        <div class="job-list" id="job-results"></div>
+        <div class="job-details" id="job-details"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
