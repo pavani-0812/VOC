@@ -1,0 +1,185 @@
+body { 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    text-align: center; 
+    margin: 50px; 
+    background-image: url(https://www.shutterstock.com/image-photo/career-acceleration-concept-personaldevelopment-260nw-435949057.jpg ); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative; 
+    z-index: 0; 
+} 
+body.job-view-mode::before { 
+    content: ""; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(30, 30, 60, 0.5); /* semi-transparent dark overlay */ 
+    z-index: -1; /* stays behind everything */ 
+    overflow-x :hidden; 
+    width: 100%; 
+} 
+.container { 
+    color: #f4f4f4; 
+    max-width: 800px; 
+    width: 90%; 
+    margin: auto; 
+    padding :10px 15px; 
+    max-height: 80vh; 
+    overflow: auto; 
+    box-sizing: border-box; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* A stronger shadow for emphasis */ 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    background: rgba(5, 5, 5, 0.909); /* A darker semi-transparent background */ 
+   /* border: 2px solid #ffffff; /* White border for a clean highlighted look */ 
+    border-radius: 10px; 
+    background :transparent; 
+} 
+ 
+h1 { 
+    text-transform: capitalize; /* Makes the text uppercase */ 
+    font-size: 3em; /* Adjust the size to make it larger */ 
+    font-weight: bold; /* Ensures the text is bold */ 
+    letter-spacing: 2px; /* Adds spacing between letters (optional) */ 
+} 
+input { 
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #e7ebee; 
+    border-radius: 5px; 
+    backdrop-filter: blur(12px); 
+    font-size: 16px; 
+    font-style: calligraphy; 
+    box-sizing: border-box; 
+} 
+.job-list { 
+    margin-top: 20px; 
+    text-align: left; 
+    transition: 0ms; 
+    display: none; /* Default concealment */ 
+} 
+.job { 
+    background: #0b0a0a; 
+    background :transparent; 
+    padding :10px; 
+    margin: 5px 0; 
+    border-radius: 5px; 
+    opacity: 0; 
+    transform: translateY(20px) scale(0.95); /* Slightly scale down */ 
+    animation: fadeSlideIn 0.5s ease forwards; /* Fade and slide-in effect */ 
+} 
+/* Make sure background image remains visible */ 
+body { 
+    position: relative; 
+    z-index: 0; 
+} 
+.job.show { 
+    opacity: 1; 
+    background :transparent; 
+    transform: translateY(0) scale(1); /* Fully visible with original size */ 
+} 
+.job.top-match { 
+    background: #111517; /* Highlight for "Top Match" */ 
+    border-left: 5px solid #4caf50; 
+    transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; 
+} 
+.job.top-match:hover { 
+    box-shadow: 0 0 15px rgba(126, 129, 127, 0.7); /* Glow effect on hover */ 
+} 
+.view-job { 
+
+    color: #d7c0cc; 
+    text-decoration: underline; 
+    background: none !important; 
+    border :none; 
+    padding :0; 
+    display:inline; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+    cursor :pointer; 
+} 
+ 
+.view-job:hover { 
+    color: #f44336; 
+} 
+.job-details { 
+    background: #181919; 
+    background: transparent; 
+    padding: 20px; 
+    border-radius: 5px; 
+    margin-top: 20px; 
+    display: none; 
+    overflow: hidden; 
+    opacity: 0; 
+    transform: translateY(-20px); /* Slide in from above */ 
+    animation: slideFadeIn 0.5s ease forwards; /* Slide and fade-in */ 
+} 
+ 
+/* Keyframes for Job Animations */ 
+@keyframes fadeSlideIn { 
+    from { 
+        opacity: 0; 
+        transform: translateY(20px) scale(0.95); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    } 
+} 
+ 
+@keyframes slideFadeIn { 
+    from { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+
+} 
+ 
+@media (max-width: 768px) { 
+    .container { 
+        margin: 10px; 
+        padding: 15px; 
+    } 
+    input { 
+        font-size: 14px; 
+    } 
+} 
+.apply-here { 
+    display: inline-block; 
+    background-color: #0b0c0c; /* Bootstrap blue */ 
+    color: white !important; 
+    padding: 10px 20px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 6px; 
+    text-decoration: none !important; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+} 
+ 
+.apply-here:hover { 
+    background-color: #0056b3; /* Darker blue on hover */ 
+    transform: scale(1.05); 
+} 
+#search-btn { 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    background-color: #e9f3ec; /* Green */ 
+    color: gray; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+} 
+ 
+#search-btn:hover { 
+    transform: scale(1.05); 
+}
